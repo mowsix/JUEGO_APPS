@@ -1,0 +1,96 @@
+[gd_scene load_steps=13 format=3 uid="uid://game"]
+
+[ext_resource type="Script" uid="uid://b3s1hr4fpu1qs" path="res://game/scripts/Game.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://player" path="res://game/scenes/Player.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dbijuqmfj23g" path="res://Sprites/Zonas/Zona 1/3.png" id="2_alnyg"]
+[ext_resource type="Texture2D" uid="uid://dinwl383sb26t" path="res://Sprites/Zonas/Zona 1/4.png" id="3_0h5e4"]
+[ext_resource type="Texture2D" uid="uid://bt3a6pix8wpad" path="res://Sprites/Zonas/Zona 1/2.png" id="4_8bgtv"]
+[ext_resource type="Texture2D" uid="uid://chitrnf7v7e5c" path="res://Sprites/Zonas/Zona 2/1.png" id="5_ygs8h"]
+[ext_resource type="PackedScene" uid="uid://pause" path="res://game/scenes/PauseMenu.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://touch" path="res://game/scenes/TouchControls.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bd4evlt8o0nb8" path="res://game/scenes/Skeleton.tscn" id="7_0h5e4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_412qp"]
+size = Vector2(1150, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h5e4"]
+size = Vector2(63, 510)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bgtv"]
+size = Vector2(59, 503.5)
+
+[node name="Game" type="Node2D"]
+position = Vector2(3, -9)
+script = ExtResource("1")
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2(-4, -5)
+
+[node name="Layer6" type="Sprite2D" parent="Background"]
+position = Vector2(576.5, 327.5)
+scale = Vector2(1.2338363, 1.1037415)
+texture = ExtResource("2_alnyg")
+
+[node name="Layer5" type="Sprite2D" parent="Background"]
+position = Vector2(576, 330.49997)
+scale = Vector2(0.29791668, 0.81249994)
+texture = ExtResource("3_0h5e4")
+
+[node name="Layer4" type="Sprite2D" parent="Background"]
+position = Vector2(579.5, 335.5)
+scale = Vector2(0.2997396, 0.8252551)
+texture = ExtResource("3_0h5e4")
+
+[node name="Layer3" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(576.5, 327.5)
+scale = Vector2(1.2338363, 1.1037415)
+texture = ExtResource("2_alnyg")
+
+[node name="Layer2" type="Sprite2D" parent="Background"]
+position = Vector2(585, 334)
+scale = Vector2(0.29947913, 0.37227952)
+texture = ExtResource("4_8bgtv")
+
+[node name="Layer1" type="Sprite2D" parent="Background"]
+position = Vector2(1074.2604, 213.89963)
+scale = Vector2(0.29895836, 0.8155584)
+texture = ExtResource("5_ygs8h")
+offset = Vector2(-1670, 135)
+
+[node name="Camera2D" type="Camera2D" parent="Background"]
+position = Vector2(580, 341)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Actors" type="Node2D" parent="."]
+
+[node name="Player" parent="Actors" instance=ExtResource("2")]
+position = Vector2(670, 11)
+
+[node name="Skeleton" parent="Actors" instance=ExtResource("7_0h5e4")]
+position = Vector2(-509, -4)
+patrol_range = 700.0
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(575, 498)
+shape = SubResource("RectangleShape2D_412qp")
+
+[node name="PauseMenu" parent="." instance=ExtResource("6")]
+
+[node name="TouchControls" parent="." instance=ExtResource("7")]
+
+[node name="ParedDerecha" type="StaticBody2D" parent="."]
+position = Vector2(1216, 410)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDerecha"]
+position = Vector2(-96, -149)
+shape = SubResource("RectangleShape2D_0h5e4")
+
+[node name="ParedIzquierda" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzquierda"]
+position = Vector2(25, 258)
+shape = SubResource("RectangleShape2D_8bgtv")
