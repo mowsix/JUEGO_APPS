@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://mainmenu"]
+
+[ext_resource type="Script" uid="uid://b4m5lqeo3esoa" path="res://game/scripts/MainMenu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b66r1c7x4e82d" path="res://game/scenes/TitleImage.png" id="2_k54sq"]
+[ext_resource type="Texture2D" uid="uid://p7x1fq0urvsn" path="res://game/scenes/BotonJueguelo.png" id="2_r6nyi"]
+[ext_resource type="Script" uid="uid://cwt68yytvvt8i" path="res://game/scripts/BrilloTitulo.gd" id="3_50wob"]
+[ext_resource type="Script" uid="uid://d34ww0lmv0obk" path="res://game/scripts/MainMenuBg.gd" id="3_cydb2"]
+[ext_resource type="Texture2D" uid="uid://b03rseyh3a8bu" path="res://game/scenes/BotonOptions.png" id="3_njqfw"]
+[ext_resource type="Texture2D" uid="uid://ddtoyud1wmfuh" path="res://game/scenes/MainMenuBG.jpg" id="4_1bhee"]
+[ext_resource type="Texture2D" uid="uid://7kptbt0ru8c3" path="res://game/scenes/ExitBoton.png" id="4_njqfw"]
+[ext_resource type="Script" uid="uid://dvo56q0xdu7fe" path="res://game/scripts/moveSpriteBg.gd" id="5_1bhee"]
+[ext_resource type="AudioStream" uid="uid://cx7tjldbvxa54" path="res://game/scenes/mainmenumusic.ogg" id="6_m85bn"]
+[ext_resource type="Texture2D" uid="uid://c6i470uqluv3w" path="res://game/scenes/BotonCreditos.png" id="7_50wob"]
+[ext_resource type="Script" uid="uid://c5iwm6qnm4ano" path="res://game/scripts/loopMusic.gd" id="7_r6nyi"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="TitleImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -24.0
+offset_right = 610.0
+offset_bottom = 384.0
+texture = ExtResource("2_k54sq")
+script = ExtResource("3_50wob")
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 705.0
+offset_top = 102.0
+offset_right = 1205.0
+offset_bottom = 602.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("2_r6nyi")
+
+[node name="Options" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 295.0
+offset_right = 1246.0
+offset_bottom = 795.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("3_njqfw")
+
+[node name="Exit" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(256, 86)
+layout_mode = 0
+offset_left = 747.00006
+offset_top = 433.0
+offset_right = 1247.0
+offset_bottom = 933.0
+scale = Vector2(0.45, 0.45)
+texture_normal = ExtResource("4_njqfw")
+
+[node name="Creditos" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 322.0
+offset_right = 662.0
+offset_bottom = 822.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_50wob")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("3_cydb2")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+position = Vector2(-3, -11)
+texture = ExtResource("4_1bhee")
+centered = false
+region_enabled = true
+region_rect = Rect2(448, 0, 1472, 1080)
+script = ExtResource("5_1bhee")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_m85bn")
+autoplay = true
+parameters/looping = true
+script = ExtResource("7_r6nyi")
