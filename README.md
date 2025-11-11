@@ -21,7 +21,7 @@ Cómo ejecutar (rápido)
 Diseño y Wireframes
 -------------------
 Puedes ver los wireframes y diseños del juego en Figma:
-- [Link a Wireframes de Figma]([https://www.figma.com/design/0b17DQQRw5CC7Ibpik1IUL/Mobile-App-Wireframing-UI-Kit--Community-?node-id=2004-923&t=6xrWOMB4fhqLbP8J-1)
+- [Link](https://www.figma.com/design/0b17DQQRw5CC7Ibpik1IUL/Mobile-App-Wireframing-UI-Kit--Community-?node-id=2004-923&t=6xrWOMB4fhqLbP8J-1)
 
 Arte y assets
 -------------
