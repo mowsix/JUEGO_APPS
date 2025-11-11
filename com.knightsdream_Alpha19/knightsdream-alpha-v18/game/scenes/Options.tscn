@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8s6fro04bu0l"]
+
+[ext_resource type="Texture2D" uid="uid://c2ii4gmpaxr7p" path="res://game/scenes/OptionsBG.png" id="1_2y0gn"]
+[ext_resource type="Script" uid="uid://w6kdm4abyw8t" path="res://game/scripts/Options.gd" id="1_fj773"]
+[ext_resource type="Texture2D" uid="uid://cegyeqqex11vo" path="res://game/scenes/BackButton.png" id="2_fj773"]
+[ext_resource type="Texture2D" uid="uid://cshw4dalgc2v5" path="res://game/scenes/soundButton.png" id="3_v1bew"]
+[ext_resource type="Texture2D" uid="uid://bbj27t5auouug" path="res://game/scenes/ActivadoButton.png" id="4_e6s7e"]
+[ext_resource type="Texture2D" uid="uid://da1s6t7byo4w8" path="res://game/scenes/desactivadoButton.png" id="5_dwysa"]
+[ext_resource type="Texture2D" uid="uid://bbb1q2py0fc6j" path="res://game/scenes/XACA.png" id="7_e6s7e"]
+[ext_resource type="AudioStream" uid="uid://ddsdy2hxtp547" path="res://game/scenes/OptionsSound.ogg" id="7_v1bew"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fj773")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.62506, 297.75)
+scale = Vector2(0.75992846, 0.6948242)
+texture = ExtResource("1_2y0gn")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 936.99994
+offset_top = 464.99997
+offset_right = 1437.0
+offset_bottom = 965.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("2_fj773")
+
+[node name="TitleSound" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = -21.0
+offset_right = 711.0
+offset_bottom = 479.0
+scale = Vector2(0.6, 0.6)
+texture_normal = ExtResource("3_v1bew")
+
+[node name="Activado" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 189.0
+offset_right = 524.0
+offset_bottom = 689.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_e6s7e")
+
+[node name="Desactivado" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 187.0
+offset_right = 813.0
+offset_bottom = 687.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("5_dwysa")
+
+[node name="XACA" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 423.99997
+offset_right = 1745.0
+offset_bottom = 1448.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("7_e6s7e")
+
+[node name="OptionsSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_v1bew")
+parameters/looping = true

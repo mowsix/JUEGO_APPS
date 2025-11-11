@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jng32i5aij5d"
+path="res://.godot/imported/violent-sword-slice-393848 (1).ogg-add614823cf459d224b0428a1878131d.oggvorbisstr"
+
+[deps]
+
+source_file="res://game/scenes/violent-sword-slice-393848 (1).ogg"
+dest_files=["res://.godot/imported/violent-sword-slice-393848 (1).ogg-add614823cf459d224b0428a1878131d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
