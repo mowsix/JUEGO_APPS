@@ -1,18 +1,14 @@
 # Knights Dream
-Juego 2D en desarrollo hecho con Godot (GDScript). Pixel art, estilo Metroidvania (o al menos aspiramos a esa dirección). Actualmente en desarrollo; vamos a lanzar una fase inicial como primer hito público.
+Juego 2D en desarrollo hecho con Godot (GDScript). Pixel art, estilo Metroidvania (o al menos aspiramos a esa dirección). Actualmente en desarrollo.
 
 Descripción breve
 -----------------
 Knights Dream es un juego de plataformas y exploración en 2D con combate y progresión tipo Metroidvania. En la primera fase encontrarás:
-- Niveles de prueba y zonas pequeñas.
-- Mecánicas base: movimiento, salto, ataque y mejora.
-- Arte en pixel art y música/efectos provisionales.
-
+- Nivel de prueba y zona pequeña.
+- Mecánicas base: movimiento, salto y ataque.
+- Arte en pixel art y música/efectos.
 Estado actual
 -------------
-- Desarrollo activo en ramas (cada miembro trabaja en su propia rama).
-- Lanzamiento: fase inicial planeada (build de prueba / demo).
-- Objetivo a mediano plazo: mapa interconectado, jefes y sistema de mejoras.
 
 Cómo ejecutar (rápido)
 ----------------------
@@ -22,10 +18,12 @@ Cómo ejecutar (rápido)
 3. Asegúrate de usar la versión de Godot indicada en `project.godot`.
 4. Ejecuta desde el editor (Play / F5).
 
+Diseño y Wireframes
+-------------------
+Puedes ver los wireframes y diseños del juego en Figma:
+- [Link a Wireframes de Figma]([URL_DE_FIGMA_AQUI](https://www.figma.com/design/0b17DQQRw5CC7Ibpik1IUL/Mobile-App-Wireframing-UI-Kit--Community-?node-id=2004-923&t=6xrWOMB4fhqLbP8J-1))
 
 Arte y assets
 -------------
 - Pixel art 2D (sprites y tilesets).
 - Assets actuales son provisionales; se reemplazarán según avance el desarrollo.
-
-
